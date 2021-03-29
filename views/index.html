@@ -1,0 +1,23 @@
+{{ template "layout" .}}
+
+{{ define "main" }}
+<table border="1">
+    <tr>
+        <td>ID</td>
+        <td>Nama</td>
+        <td>Harga</td>
+        <td>Stock</td>
+        <td>Status</td>
+    </tr>
+    {{ range .}}
+    <tr>
+        <td>{{ .ID}}</td>
+        <td>{{ .Name}}</td>
+        <td>{{ .Price}}</td>
+        <td>{{ .Stock }}</td>
+        <td>{{ .StockStatus }}</td>
+    </tr>
+    {{ end }}
+</table>
+
+{{ end }}
